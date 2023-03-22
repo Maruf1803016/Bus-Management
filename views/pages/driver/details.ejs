@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Driver Details</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">   
+</head>
+<body>
+
+
+
+    <div class="container d-flex justify-center">
+        <h2>Driver Details</h2>
+        <form action="/edit-driver-self" method="post">
+         <input type="hidden" value='<%= driver.id %>'>
+                      
+             <div class="input-group mb-3">
+                 <span class="input-group-text">Name</span>
+                 <input type="text" class="form-control" placeholder="Name" name="name" value='<%= driver.name %>'>
+             </div>
+             <div class="input-group mb-3">
+                 <span class="input-group-text">Email</span>
+                 <input type="text" class="form-control" placeholder="Email" name="email" value='<%= driver.email %>'>
+             </div>
+ 
+             <div class="input-group mb-3">
+                 <span class="input-group-text">Age</span>
+                 <input type="text" class="form-control" placeholder="Age" name="age" value='<%= driver.age %>'>
+             </div>
+             <div class="input-group mb-3">
+                 <span class="input-group-text">Phone</span>
+                 <input type="text" class="form-control" placeholder="Phone" name="phone" value='<%= driver.phone %>'>
+             </div>
+ 
+             <div class="input-group mb-3">
+                 <span class="input-group-text">Password</span>
+                 <input type="password" class="form-control" placeholder="Password" name="password" value='<%= driver.password %>'>
+             </div> <br>
+             <input type="submit" class="btn btn-info" value="Save" name="save">
+        </form>
+        <br>
+        <br>
+        <a href="/logout">Logout</a> <br>
+        <a href="/">Back To Home</a>
+
+       </div><!-- /.container-fluid -->
+
+
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
